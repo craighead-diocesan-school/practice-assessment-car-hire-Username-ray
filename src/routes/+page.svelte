@@ -49,7 +49,7 @@
   {:else}
     <div class="car-list">
       {#each availableCars as car}
-        <Card {car} on:addToCart={() => addToCart(car)} />
+        <Card {car} addToCart={() => addToCart(car)} />
       {/each}
     </div>
   {/if}
