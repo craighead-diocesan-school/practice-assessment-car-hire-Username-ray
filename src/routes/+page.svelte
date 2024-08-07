@@ -2,6 +2,7 @@
   import Header from "$lib/Header.svelte"
   import { onMount } from "svelte"
   import Card from "$lib/Card.svelte"
+  import Footer from "$lib/Footer.svelte"
 
   let cars = []
   let availableCars = []
@@ -53,7 +54,7 @@
     </div>
   {/if}
 
-  <h2>Your Cart</h2>
+  <h2>Your Cart 🛒</h2>
   {#if cart.length === 0}
     <div>Your cart is empty.</div>
   {:else}
@@ -66,11 +67,13 @@
   {/if}
 </main>
 
-<footer>
-  <p>&copy; Craighead Diocesan School 2024</p>
-</footer>
+<Footer />
 
 <style>
+  main {
+    font-family: "PT Serif", serif;
+    background-color: aliceblue;
+  }
   .car-list,
   .cart {
     margin: 20px;
@@ -81,5 +84,14 @@
   .cart {
     flex-direction: column;
   }
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 1%;
+  }
+  div {
+    text-align: center;
+    padding: 1%;
   }
 </style>
