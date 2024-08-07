@@ -63,7 +63,7 @@
         <Card {car} />
       {/each}
     </div>
-    <div>Total Cost: ${totalCost}</div>
+    <div class="totalCost">Total Cost: ${totalCost}</div>
   {/if}
 </main>
 
@@ -93,5 +93,10 @@
   div {
     text-align: center;
     padding: 1%;
+  }
+  .totalCost {
+    color: blue;
+    font-weight: bold;
+    font-size: 22px;
   }
 </style>
