@@ -74,5 +74,12 @@
   .car-list,
   .cart {
     margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .cart {
+    flex-direction: column;
+  }
   }
 </style>
