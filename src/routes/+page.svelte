@@ -9,6 +9,7 @@
   let error = null
   let cart = []
   let cartLimit = 3
+  let totalCost = 0
   const apiUrl = "https://digitech.craighead.school.nz/api/car-hire"
 
   onMount(async () => {
@@ -32,9 +33,7 @@
     cart = [...cart, car]
   }
 
-  function totalCost() {
-    return cart.reduce((total, car) => total + car.price, 0)
-  }
+  $: totalCost = cart.reduce((total, car) => total + car.price, 0)
 </script>
 
 <Header />
@@ -63,7 +62,7 @@
         <Card {car} />
       {/each}
     </div>
-    <div>Total Cost: ${totalCost()}</div>
+    <div>Total Cost: ${totalCost}</div>
   {/if}
 </main>
 
